@@ -13,9 +13,9 @@ class SecondActivity : AppCompatActivity() {
 
         val button2 = findViewById<Button>(R.id.button)
 
-        val bundle:Bundle = intent.extras
-        val id = bundle.get("id_value")
-        val language = bundle.get("language_value")
+        val bundle: Bundle? = intent.extras
+        val id = bundle?.get("id_value")
+        val language = bundle?.get("language_value")
         Toast.makeText(applicationContext,id.toString()+" "+language,Toast.LENGTH_LONG).show()
         button2.setOnClickListener(){
             intent = Intent(this,MainActivity::class.java)
